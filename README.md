@@ -49,7 +49,7 @@ mutation [createCourse  (nome de função, não é atrelado ao código diretamen
 ```
 
 ## Dados encadeados:
-	- Dentro das queries, caso haja uma relação definida podemos buscar sem precisar fazer uma nova função, exemplo nessa query eu estou buscando os dados de categoria dentro de uma query de curso sem ter necessáriamente mexido na função de busca de cursos, isso ocorre porque fizemos uma função de relacionamento pode ser invocada contanto que haja relação entre as tabelas, no caso, o course sempre tera um category_id que é o elo entre as entidades
+  - Dentro das queries, caso haja uma relação definida podemos buscar sem precisar fazer uma nova função, exemplo nessa query eu estou buscando os dados de categoria dentro de uma query de curso sem ter necessáriamente mexido na função de busca de cursos, isso ocorre porque fizemos uma função de relacionamento pode ser invocada contanto que haja relação entre as tabelas, no caso, o course sempre tera um category_id que é o elo entre as entidades
 
 ```
 query queryCoursesWithCategories{
