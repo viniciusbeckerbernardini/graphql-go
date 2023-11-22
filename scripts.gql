@@ -1,0 +1,64 @@
+#CRIAÇÃO COM RETORNO
+mutation createCategory {
+  createCategory(input: {
+    name:"FullCycle",
+    description: "Show de bola dalhe grêmio"
+  }){
+    id
+    name
+    description
+  }
+}
+
+#QUERY DO GRAPHQL
+query queryCategories {
+  categories {
+    id
+    name
+    description
+  }
+}
+
+mutation createCourse {
+  createCourse(input: {
+    name: "FullCycle",
+    description: "Pica",
+    categoryId: 1
+  }) {
+    id
+    name
+    description
+  }
+}
+
+query queryCourses{
+  courses {
+    id
+    name
+    description
+  }
+}
+
+query queryCategories {
+  categories {
+    id
+    name
+    description
+    courses {
+      id
+      name
+    }
+  }
+}
+
+mutation createCourse {
+  createCourse(input: {
+    name: "FullCycle",
+    description: "Pica",
+    categoryId: "aa035386-a9c1-4ddb-97bc-da2fdfc0d8d0"
+  }) {
+    id
+    name
+    description
+  }
+}
